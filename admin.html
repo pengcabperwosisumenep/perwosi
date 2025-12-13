@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin PERWOSI</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 40px;
+    }
+
+    .login, .admin {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #2e8b57;
+      text-align: center;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    button {
+      background: #2e8b57;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .admin {
+      display: none;
+    }
+
+    textarea {
+      height: 120px;
+    }
+
+    .hasil {
+      background: #eee;
+      padding: 15px;
+      margin-top: 20px;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="login">
+  <h2>Login Admin</h2>
+  <input type="password" id="password" placeholder="Masukkan password">
+  <button onclick="login()">Login</button>
+</div>
+
+<div class="admin">
+  <h2>Tambah Berita</h2>
+
+  <input type="text" id="judul" placeholder="Judul Berita">
+  <input type="text" id="tanggal" placeholder="Tanggal (contoh: 20 Januari 2025)">
+  <input type="text" id="foto" placeholder="Nama foto (contoh: rapat.jpg)">
+  <textarea id="isi" placeholder="Isi berita"></textarea>
+
+  <button onclick="buatBerita()">Buat Kode Berita</button>
+
+  <div class="hasil" id="hasil"></div>
+</div>
+
+<script>
+  const PASSWORD = "adminperwosi1"; // GANTI PASSWORD DI SINI
+
+  function login() {
+    const pass = document.getElementById("password").value;
+    if (pass === PASSWORD) {
+      document.querySelector(".login").style.display = "none";
+      document.querySelector(".admin").style.display = "block";
+    } else {
+      alert("Password salah!");
+    }
+  }
+
+  function buatBerita() {
+    const judul = document.getElementById("judul").value;
+    const tanggal = document.getElementById("tanggal").value;
+    const foto = document.getElementById("foto").value;
+    const isi = document.getElementById("isi").value;
+
+    const kode = `
+<div class="berita">
+  <h3>${judul}</h3>
+  <p class="tanggal">${tanggal}</p>
+  <img src="foto-berita/${foto}" alt="${judul}">
+  <p>${isi}</p>
+</div>
+`;
+
+    document.getElementById("hasil").textContent = kode;
+  }
+</script>
+
+</body>
+</html>
