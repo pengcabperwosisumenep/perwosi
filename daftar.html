@@ -1,95 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>Pendaftaran Anggota PERWOSI Sumenep</title>
+  <meta charset="UTF-8">
+  <title>Pendaftaran Anggota PERWOSI Kabupaten Sumenep</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-margin: 0 12px;
-font-weight: 600;
-padding-bottom: 5px;
-}
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f2f4f7;
+      color: #333;
+    }
 
+    header {
+      background: linear-gradient(135deg, #2e8b57, #3cb371);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
 
-nav a:hover {
-border-bottom: 2px solid white;
-}
+    header img {
+      width: 100px;
+      margin-bottom: 10px;
+    }
 
+    header h1 {
+      margin: 10px 0;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
 
-.section {
-background: white;
-margin: 30px auto;
-padding: 30px;
-max-width: 900px;
-border-radius: 12px;
-box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
+    nav {
+      margin-top: 15px;
+    }
 
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 600;
+      padding-bottom: 5px;
+    }
 
-h2 {
-color: #2e8b57;
-margin-top: 0;
-}
+    nav a:hover {
+      border-bottom: 2px solid white;
+    }
 
+    .section {
+      background: white;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      text-align: center;
+    }
 
-.btn {
-display: inline-block;
-background: linear-gradient(135deg, #2e8b57, #3cb371);
-color: white;
-padding: 14px 28px;
-border-radius: 30px;
-text-decoration: none;
-font-weight: bold;
-transition: transform 0.2s, box-shadow 0.2s;
-}
+    h2 {
+      color: #2e8b57;
+      margin-top: 0;
+    }
 
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: linear-gradient(135deg, #2e8b57, #3cb371);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
 
-.btn:hover {
-transform: translateY(-2px);
-box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
 
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      font-size: 14px;
+    }
 
-.galeri {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-gap: 20px;
-}
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 22px;
+      }
 
-
-.galeri img {
-width: 100%;
-border-radius: 12px;
-box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-}
-
-
-footer {
-text-align: center;
-padding: 20px;
-color: #777;
-font-size: 14px;
-}
-
-
-@media (max-width: 600px) {
-header h1 {
-font-size: 22px;
-}
-
-
-nav a {
-display: inline-block;
-margin: 8px;
-}
-}
-</style>
+      nav a {
+        display: inline-block;
+        margin: 8px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
+  <img src="logo.png" alt="Logo PERWOSI">
   <h1>PERWOSI Kabupaten Sumenep</h1>
+
   <nav>
     <a href="index.html">Beranda</a>
     <a href="profil2.html">Profil</a>
@@ -101,16 +117,21 @@ margin: 8px;
 
 <div class="section">
   <h2>Pendaftaran Anggota PERWOSI</h2>
+
   <p>
-    Silakan klik tombol di bawah ini untuk mendaftar sebagai
-    anggota PERWOSI Kabupaten Sumenep.
+    Silakan klik tombol di bawah ini untuk melakukan pendaftaran
+    sebagai anggota PERWOSI Kabupaten Sumenep.
   </p>
 
-  <!-- GANTI LINK DI BAWAH INI -->
+  <!-- GANTI LINK GOOGLE FORM DI SINI -->
   <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc_pclPBGSVySMgHB30T5FP05CjY950r1YcE5wNB8A0qBXU4g/viewform?usp=header" target="_blank">
     Daftar Sekarang
   </a>
 </div>
+
+<footer>
+  © 2025 PERWOSI Kabupaten Sumenep
+</footer>
 
 </body>
 </html>
