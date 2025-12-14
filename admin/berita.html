@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kelola Berita | Admin PERWOSI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+    }
+
+    header {
+      background: #2e9d60;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .box {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    textarea {
+      min-height: 150px;
+    }
+
+    button {
+      margin-top: 20px;
+      background: #1e88e5;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    button:hover {
+      background: #1565c0;
+    }
+
+    .back {
+      margin-top: 15px;
+    }
+
+    .back a {
+      text-decoration: none;
+      color: #2e9d60;
+      font-weight: bold;
+    }
+
+    pre {
+      background: #f1f1f1;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Kelola Berita</h1>
+  <p>Admin PERWOSI Kabupaten Sumenep</p>
+</header>
+
+<div class="container">
+
+  <div class="box">
+    <h2>Tulis Berita Baru</h2>
+
+    <label>Judul Berita</label>
+    <input type="text" id="judul">
+
+    <label>Tanggal</label>
+    <input type="date" id="tanggal">
+
+    <label>Isi Berita</label>
+    <textarea id="isi"></textarea>
+
+    <button onclick="buatBerita()">Buat Kode Berita</button>
+  </div>
+
+  <div class="box">
+    <h2>Hasil Kode (Copy ke berita.html)</h2>
+    <pre id="hasil"></pre>
+  </div>
+
+  <div class="back">
+    <a href="dashboard.html">← Kembali ke Dashboard</a>
+  </div>
+
+</div>
+
+<script>
+  function buatBerita() {
+    const judul = document.getElementById("judul").value;
+    const tanggal = document.getElementById("tanggal").value;
+    const isi = document.getElementById("isi").value;
+
+    if (!judul || !tanggal || !isi) {
+      alert("Semua kolom harus diisi!");
+      return;
+    }
+
+    const html = `
+<div class="berita">
+  <h2>${judul}</h2>
+  <small>${tanggal}</small>
+  <p>${isi.replace(/\n/g, "<br>")}</p>
+  <hr>
+</div>
+`;
+
+    document.getElementById("hasil").textContent = html;
+  }
+</script>
+
+</body>
+</html>
