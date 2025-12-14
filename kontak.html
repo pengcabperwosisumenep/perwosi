@@ -1,98 +1,181 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Kontak | PERWOSI Kabupaten Sumenep</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Kontak | PERWOSI Kabupaten Sumenep</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f6f8;
-    }
+    <!-- Aksesibilitas -->
+    <meta name="description" content="Form Kontak PERWOSI Kabupaten Sumenep">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #333;
+        }
 
-    header {
-      background: #3aa76d;
-      text-align: center;
-      padding: 25px 10px;
-      color: white;
-    }
+        header {
+            background: #2e9d60;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
 
-    header img {
-      width: 90px;
-    }
+        header h1 {
+            margin: 10px 0 0;
+            font-size: 22px;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-      font-size: 14px;
-    }
+        nav {
+            margin-top: 10px;
+        }
 
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-    }
+        nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    .box {
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
+        nav a:focus,
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-    h2 {
-      color: #3aa76d;
-    }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #777;
-      font-size: 14px;
-    }
-  </style>
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .full {
+            grid-column: 1 / 3;
+        }
+
+        button {
+            background: #1e88e5;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #1565c0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            form {
+                grid-template-columns: 1fr;
+            }
+            .full {
+                grid-column: 1 / 2;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
 <header>
-  <img src="foto/logo.png" alt="Logo PERWOSI Kabupaten Sumenep">
-  <h1>Kontak Kami</h1>
-  <nav>
+    <h1>PERWOSI Kabupaten Sumenep</h1>
+    <nav aria-label="Menu Utama">
     <a href="index.html">Beranda</a>
-    <a href="profil.html">Profil</a>
+    <a href="profil2.html">Profil</a>
     <a href="program.html">Program</a>
     <a href="galeri.html">Galeri</a>
     <a href="berita.html">Berita</a>
     <a href="daftar.html">Daftar</a>
-    <a href="kontak.html">Kontak</a>
-  </nav>
+    <a href="kontak.html" aria-current="page">Kontak</a>
+</nav>
 </header>
 
-<div class="container">
-  <div class="box">
-    <h2>Kontak PERWOSI Kabupaten Sumenep</h2>
+<main>
+    <h2>Kontak Kami</h2>
 
-    <p><strong>Alamat:</strong><br>
-      Sekretariat PERWOSI Kabupaten Sumenep
-    </p>
+    <form 
+        action="mailto:pengcabperwosisumenep@gmail.com"
+        method="post"
+        enctype="text/plain"
+        aria-label="Form Kontak PERWOSI">
 
-    <p><strong>Telepon / WhatsApp:</strong><br>
-      08xxxxxxxxxx
-    </p>
+        <div>
+            <label for="nama-depan">Nama Depan *</label>
+            <input id="nama-depan" name="Nama Depan" required>
+        </div>
 
-    <p><strong>Email:</strong><br>
-      perwosisumenep@gmail.com
-    </p>
-  </div>
-</div>
+        <div>
+            <label for="nama-belakang">Nama Belakang</label>
+            <input id="nama-belakang" name="Nama Belakang">
+        </div>
+
+        <div class="full">
+            <label for="email">Email *</label>
+            <input id="email" name="Email" type="email" required>
+        </div>
+
+        <div class="full">
+            <label for="telepon">Nomor Telepon</label>
+            <input id="telepon" name="Telepon">
+        </div>
+
+        <div class="full">
+            <label for="pesan">Pesan *</label>
+            <textarea id="pesan" name="Pesan" required></textarea>
+        </div>
+
+        <div class="full" style="text-align:center;">
+            <button type="submit">Hubungi Kami</button>
+            <p style="font-size:13px; margin-top:10px;">
+                Pesan akan dikirim melalui aplikasi email Anda
+            </p>
+        </div>
+    </form>
+</main>
 
 <footer>
-  © 2025 PERWOSI Kabupaten Sumenep
+    © 2025 PERWOSI Kabupaten Sumenep
 </footer>
 
 </body>
