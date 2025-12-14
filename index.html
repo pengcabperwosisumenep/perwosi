@@ -2,25 +2,19 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>PERWOSI Kabupaten Sumenep</title>
+  <title>PERWOSI KABUPATEN SUMENEP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO & Aksesibilitas -->
-  <meta name="description" content="Website Resmi Pengurus Cabang Persatuan Wanita Olahraga Seluruh Indonesia Kabupaten Sumenep">
-
+  <!-- Aksesibilitas & SEO -->
+  <meta name="description" content="Website resmi Pengurus Cabang Persatuan Wanita Olahraga Seluruh Indonesia Kabupaten Sumenep">
+  
   <style>
-    :root {
-      --hijau: #2e7d4f;
-      --hijau-muda: #e9f7ef;
-      --abu: #f4f6f8;
-    }
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: var(--abu);
-      color: #333;
       line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
     }
 
     /* Skip link */
@@ -31,15 +25,14 @@
     .skip-link:focus {
       left: 10px;
       top: 10px;
-      background: var(--hijau);
+      background: #2e7d4f;
       color: white;
       padding: 8px;
       z-index: 1000;
     }
 
-    /* Header ala pemerintah */
     header {
-      background: var(--hijau);
+      background-color: #2e7d4f;
       color: white;
       text-align: center;
       padding: 20px 10px;
@@ -47,7 +40,12 @@
 
     header img {
       width: 90px;
-      margin-bottom: 10px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    nav {
+      margin-top: 10px;
     }
 
     nav a {
@@ -57,88 +55,42 @@
       font-weight: bold;
     }
 
-    nav a:hover,
-    nav a:focus {
+    nav a:focus,
+    nav a:hover {
       text-decoration: underline;
     }
 
-    /* Pengumuman */
     .pengumuman {
-      background: var(--hijau-muda);
-      color: var(--hijau);
+      background-color: #e9f7ef;
+      color: #1e7f4f;
       padding: 10px;
       font-weight: bold;
-      border-bottom: 2px solid var(--hijau);
+      border-bottom: 2px solid #2e9f67;
     }
 
-    /* Waktu */
-    .waktu {
+    .waktu-sekarang {
       text-align: center;
       font-size: 14px;
-      background: #fff;
+      background-color: #f4fbf7;
       padding: 8px;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #d6eee1;
     }
 
-    /* Hero */
-    .hero {
-      background: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      color: var(--hijau);
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-    }
-
-    /* Tombol utama */
-    .aksi {
-      margin-top: 25px;
-    }
-
-    .btn {
-      background: var(--hijau);
-      color: white;
-      padding: 12px 22px;
-      margin: 5px;
-      display: inline-block;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .btn:hover,
-    .btn:focus {
-      background: #256644;
-    }
-
-    /* Konten */
     main {
-      padding: 30px 20px;
-      background: white;
-      max-width: 900px;
-      margin: 30px auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 20px;
+      background-color: white;
     }
 
-    main h2 {
-      color: var(--hijau);
+    h1, h2 {
+      color: #2e7d4f;
     }
 
-    /* Footer */
     footer {
-      background: var(--hijau);
+      background-color: #2e7d4f;
       color: white;
       text-align: center;
       padding: 15px;
-      margin-top: 30px;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -164,39 +116,53 @@
 
 <div class="pengumuman" role="region" aria-label="Pengumuman">
   <marquee>
-    📢 Selamat datang di Website Resmi PERWOSI Kabupaten Sumenep | Pembinaan olahraga perempuan berkelanjutan
+    📢 Selamat datang di Website Resmi Pengurus Cabang PERWOSI Kabupaten Sumenep | 
+    Ikuti program dan kegiatan olahraga wanita bersama kami
   </marquee>
 </div>
 
-<div class="waktu" aria-live="polite">
+<div class="waktu-sekarang" aria-live="polite">
   <span id="tanggal"></span> | <span id="jam"></span> WIB
 </div>
-
-<section class="hero">
-  <h1>Persatuan Wanita Olahraga Seluruh Indonesia</h1>
-  <p>
-    Website resmi Pengurus Cabang PERWOSI Kabupaten Sumenep sebagai pusat informasi,
-    kegiatan, dan pembinaan olahraga perempuan.
-  </p>
-
-  <div class="aksi">
-    <a href="berita.html" class="btn">Lihat Berita</a>
-    <a href="daftar.html" class="btn">Daftar Anggota</a>
-    <a href="kontak.html" class="btn">Hubungi Kami</a>
-  </div>
-</section>
 
 <main id="konten">
   <h2>Selamat Datang</h2>
   <p>
-    PERWOSI Kabupaten Sumenep berkomitmen mendorong perempuan untuk hidup sehat,
-    aktif, dan produktif melalui olahraga yang inklusif dan berkelanjutan.
+    Website ini merupakan media informasi resmi Pengurus Cabang Persatuan Wanita Olahraga Seluruh Indonesia (PERWOSI)
+    Kabupaten Sumenep. Kami berkomitmen mendorong partisipasi perempuan dalam olahraga
+    untuk hidup sehat, aktif, dan berprestasi.
   </p>
 
   <p>
-    Website ini dirancang <strong>RAMAH DISABILITAS</strong>, mudah diakses oleh
-    penyandang disabilitas, lansia, dan pengguna pembaca layar.
+    Website ini dirancang agar mudah diakses oleh semua kalangan, termasuk penyandang disabilitas (RAMAH DISABILITAS),
+    lansia, dan pengguna pembaca layar.
   </p>
+<div style="text-align:center; margin-top:30px;">
+  <a href="berita.html" 
+     style="background:#2e7d4f;color:#fff;padding:12px 20px;
+            border-radius:6px;text-decoration:none;margin:5px;
+            display:inline-block;"
+     aria-label="Lihat berita terbaru PERWOSI">
+     Lihat Berita
+  </a>
+
+  <a href="daftar.html" 
+     style="background:#2e7d4f;color:#fff;padding:12px 20px;
+            border-radius:6px;text-decoration:none;margin:5px;
+            display:inline-block;"
+     aria-label="Daftar menjadi anggota PERWOSI">
+     Daftar Anggota
+  </a>
+
+  <a href="kontak.html" 
+     style="background:#2e7d4f;color:#fff;padding:12px 20px;
+            border-radius:6px;text-decoration:none;margin:5px;
+            display:inline-block;"
+     aria-label="Hubungi PERWOSI Kabupaten Sumenep">
+     Hubungi Kami
+  </a>
+</div>
+
 </main>
 
 <footer>
@@ -205,18 +171,23 @@
 
 <script>
 function updateWaktu() {
-  const now = new Date();
+  const sekarang = new Date();
 
-  document.getElementById("tanggal").textContent =
-    now.toLocaleDateString("id-ID", {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric"
-    });
+  const tanggal = sekarang.toLocaleDateString('id-ID', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
 
-  document.getElementById("jam").textContent =
-    now.toLocaleTimeString("id-ID");
+  const jam = sekarang.toLocaleTimeString('id-ID', {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  });
+
+  document.getElementById("tanggal").textContent = tanggal;
+  document.getElementById("jam").textContent = jam;
 }
 
 setInterval(updateWaktu, 1000);
