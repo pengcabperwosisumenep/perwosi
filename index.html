@@ -277,12 +277,15 @@ footer {
 <footer>
   <p>&copy; 2025 PERWOSI Kabupaten Sumenep</p>
 </footer>
-<!-- WOSI AI (Chatbase) -->
-<script
-  src="https://www.chatbase.co/embed.min.js"
-  chatbotId="mRk8gVj87HGzEb5Yicnw"
-  domain="www.chatbase.co"
-  defer>
+<script>
+  (function(d, w, c) {
+    w.Chatbase = w.Chatbase || {};
+    w.Chatbase.c = c;
+    var s = d.createElement("script");
+    s.src = "https://www.chatbase.co/embed.min.js";
+    s.defer = true;
+    d.body.appendChild(s);
+  })(document, window, "mRk8gVj87HGzEb5Yicnw");
 </script>
 
 <style>
