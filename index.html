@@ -2,134 +2,108 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>PERWOSI Kabupaten Sumenep</title>
-  <meta name="description" content="Website resmi PERWOSI Kabupaten Sumenep">
+  <title>PERWOSI KABUPATEN SUMENEP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Aksesibilitas & SEO -->
+  <meta name="description" content="Website resmi Pengurus Cabang Persatuan Wanita Olahraga Seluruh Indonesia Kabupaten Sumenep">
+  
   <style>
-.waktu-sekarang {
-  text-align: center;
-  font-size: 14px;
-  color: #2e7d4f;
-  padding: 8px 0;
-  background-color: #f4fbf7;
-  border-bottom: 1px solid #d6eee1;
-  font-weight: 600;
-}
-
-  .pengumuman {
-  background-color: #e9f7ef;
-  color: #1e7f4f;
-  font-weight: 600;
-  padding: 10px 0;
-  border-bottom: 2px solid #2e9f67;
-}
-
-.pengumuman marquee {
-  font-size: 15px;
-}
- 
- body {
+    body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f4f6f8;
       line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+    }
+    .skip-link:focus {
+      left: 10px;
+      top: 10px;
+      background: #2e7d4f;
+      color: white;
+      padding: 8px;
+      z-index: 1000;
     }
 
     header {
-      background-color: #2e9d60;
+      background-color: #2e7d4f;
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 20px 10px;
+    }
+
+    header img {
+      width: 90px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    nav {
+      margin-top: 10px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 10px;
+      margin: 0 8px;
       font-weight: bold;
     }
 
+    nav a:focus,
     nav a:hover {
       text-decoration: underline;
     }
 
-    .hero {
-      background: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    .hero img {
-      max-width: 300px;
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      color: #2e9d60;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: 0 auto 20px;
-      color: #333;
-    }
-
-    .button {
-      display: inline-block;
-      background-color: #2e9d60;
-      color: white;
-      padding: 12px 20px;
-      margin: 5px;
-      border-radius: 5px;
-      text-decoration: none;
+    .pengumuman {
+      background-color: #e9f7ef;
+      color: #1e7f4f;
+      padding: 10px;
       font-weight: bold;
+      border-bottom: 2px solid #2e9f67;
     }
 
-    .button:hover {
-      background-color: #257c4c;
+    .waktu-sekarang {
+      text-align: center;
+      font-size: 14px;
+      background-color: #f4fbf7;
+      padding: 8px;
+      border-bottom: 1px solid #d6eee1;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 30px auto;
+    main {
       padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      background-color: white;
+    }
+
+    h1, h2 {
+      color: #2e7d4f;
     }
 
     footer {
+      background-color: #2e7d4f;
+      color: white;
       text-align: center;
-      padding: 20px;
-      color: #777;
-      font-size: 14px;
-    }
-
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 8px 0;
-      }
+      padding: 15px;
+      margin-top: 20px;
     }
   </style>
 </head>
 
 <body>
 
+<a href="#konten" class="skip-link">Lewati ke Konten</a>
+
 <header>
-  <img 
-    src="foto/logo.png" 
-    alt="Logo PERWOSI KABUPATEN SUMENEP"
-    style="width:90px; margin-bottom:10px;"
-  >
+  <img src="foto/logo.png" alt="Logo PERWOSI Kabupaten Sumenep">
+  <h1>PERWOSI Kabupaten Sumenep</h1>
 
-  <h1>PERWOSI KABUPATEN SUMENEP</h1>
-
-  <nav>
+  <nav aria-label="Menu Utama">
     <a href="index.html">Beranda</a>
     <a href="profil.html">Profil</a>
     <a href="program.html">Program</a>
@@ -139,50 +113,41 @@
     <a href="kontak.html">Kontak</a>
   </nav>
 </header>
+
+<div class="pengumuman" role="region" aria-label="Pengumuman">
+  <marquee>
+    📢 Selamat datang di Website Resmi Pengurus Cabang PERWOSI Kabupaten Sumenep | 
+    Ikuti program dan kegiatan olahraga wanita bersama kami
+  </marquee>
+</div>
+
 <div class="waktu-sekarang" aria-live="polite">
   <span id="tanggal"></span> | <span id="jam"></span> WIB
 </div>
 
-<div class="pengumuman" role="region" aria-label="Pengumuman">
-  <marquee behavior="scroll" direction="left">
-    📢 Selamat datang di Website Resmi PERWOSI Kabupaten Sumenep |
-    Pendaftaran anggota baru dibuka |
-    Ikuti kegiatan dan program terbaru kami
-  </marquee>
-</div>
-
-<section class="hero">
-  <!-- GANTI FOTO INI -->
-  <img src="foto/beranda.jpg" alt="Kegiatan olahraga PERWOSI Kabupaten Sumenep">
-
-  <h1>Persatuan Wanita Olahraga Seluruh Indonesia</h1>
-  <p>
-    Website resmi PERWOSI Kabupaten Sumenep sebagai wadah informasi,
-    kegiatan, dan pembinaan olahraga perempuan.
-  </p>
-
-  <a href="berita.html" class="button">Lihat Berita</a>
-  <a href="daftar.html" class="button">Daftar Anggota</a>
-  <a href="kontak.html" class="button">Hubungi Kami</a>
-</section>
-
-<section class="container">
+<main id="konten">
   <h2>Selamat Datang</h2>
   <p>
-    PERWOSI Kabupaten Sumenep berkomitmen mendorong perempuan untuk
-    hidup sehat, aktif, dan produktif melalui kegiatan olahraga
-    yang inklusif dan berkelanjutan.
+    Website ini merupakan media informasi resmi Pengurus Cabang Persatuan Wanita Olahraga Seluruh Indonesia (PERWOSI)
+    Kabupaten Sumenep. Kami berkomitmen mendorong partisipasi perempuan dalam olahraga
+    untuk hidup sehat, aktif, dan berprestasi.
   </p>
-</section>
+
+  <p>
+    Website ini dirancang agar mudah diakses oleh semua kalangan, termasuk penyandang disabilitas (RAMAH DISABILITAS),
+    lansia, dan pengguna pembaca layar.
+  </p>
+</main>
 
 <footer>
-  © 2025 PERWOSI Kabupaten Sumenep
+  <p>&copy; 2025 PERWOSI Kabupaten Sumenep</p>
 </footer>
+
 <script>
 function updateWaktu() {
   const sekarang = new Date();
 
-  const hari = sekarang.toLocaleDateString('id-ID', {
+  const tanggal = sekarang.toLocaleDateString('id-ID', {
     weekday: 'long',
     year: 'numeric',
     month: 'long',
@@ -195,7 +160,7 @@ function updateWaktu() {
     second: '2-digit'
   });
 
-  document.getElementById("tanggal").textContent = hari;
+  document.getElementById("tanggal").textContent = tanggal;
   document.getElementById("jam").textContent = jam;
 }
 
