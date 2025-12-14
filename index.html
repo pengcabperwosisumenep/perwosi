@@ -9,11 +9,20 @@
   <meta name="description" content="Website resmi Pengurus Cabang Persatuan Wanita Olahraga Seluruh Indonesia Kabupaten Sumenep">
 
   <style>
+/* ===== WARNA IDENTITAS PERWOSI ===== */
+:root {
+  --warna-utama: #2e7d4f;       /* Hijau PERWOSI */
+  --warna-sekunder: #e9f7ef;    /* Hijau muda lembut */
+  --warna-aksen: #f4c430;       /* Kuning emas (aksen) */
+  --warna-teks: #333333;
+  --warna-putih: #ffffff;
+}
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      background-color: #f4f6f8;
+      background-color: var(--warna-utama);
       color: #333;
     }
 
@@ -33,11 +42,10 @@
 
     /* HEADER */
     header {
-      background: linear-gradient(135deg, #2e7d4f, #3fa66b);
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-    }
+  background-color: var(--warna-utama);
+  color: var(--warna-putih);
+}
+
 
     header img {
       width: 90px;
@@ -141,12 +149,10 @@
 
     /* FOOTER */
     footer {
-      background-color: #2e7d4f;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
-    }
+  background-color: var(--warna-utama);
+  color: var(--warna-putih);
+}
+
 /* ===== STYLE BERITA ALA WEBSITE PEMERINTAH ===== */
 .berita-wrapper {
   display: grid;
@@ -156,13 +162,8 @@
 }
 
 .berita-card {
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.2s ease;
+  border-top: 4px solid var(--warna-utama);
 }
-
 .berita-card:hover {
   transform: translateY(-4px);
 }
@@ -250,14 +251,10 @@ nav a:focus {
 /* ===== HERO ALA WEBSITE PEMERINTAH ===== */
 .hero {
   background: linear-gradient(
-      rgba(46, 125, 79, 0.85),
-      rgba(46, 125, 79, 0.85)
-    ),
-    url('foto/hero.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 60px 20px;
+    rgba(46, 125, 79, 0.9),
+    rgba(46, 125, 79, 0.9)
+  ),
+  url('foto/hero.jpg');
 }
 
 .hero-inner {
@@ -275,15 +272,10 @@ nav a:focus {
   max-width: 700px;
 }
 
-.hero a {
-  display: inline-block;
-  margin-top: 20px;
-  background: white;
-  color: #2e7d4f;
-  padding: 12px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
+.hero a,
+button {
+  background-color: var(--warna-putih);
+  color: var(--warna-utama);
 }
 
 .hero a:hover,
