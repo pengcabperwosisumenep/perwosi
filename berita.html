@@ -2,21 +2,30 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Berita | PERWOSI Kabupaten Sumenep</title>
+  <title>Berita | PERWOSI KABUPATEN SUMENEP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Berita dan informasi kegiatan PERWOSI Kabupaten Sumenep">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #2e9d60;
+      background: linear-gradient(135deg, #2e7d4f, #3fa66b);
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 25px 15px;
+    }
+
+    header img {
+      width: 90px;
+      margin-bottom: 10px;
     }
 
     nav a {
@@ -26,51 +35,69 @@
       font-weight: bold;
     }
 
-    nav a:hover {
+    nav a:hover,
+    nav a:focus {
       text-decoration: underline;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 20px;
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
     }
 
-    .berita-item {
+    h1 {
+      color: #2e7d4f;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .berita-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .berita-card {
       background: white;
-      margin-bottom: 25px;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
     }
 
-    .berita-item img {
+    .berita-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .berita-card img {
       width: 100%;
-      border-radius: 8px;
-      margin-bottom: 15px;
+      height: 180px;
+      object-fit: cover;
     }
 
-    .berita-item h3 {
+    .berita-content {
+      padding: 18px;
+    }
+
+    .berita-content h2 {
+      font-size: 18px;
+      color: #2e7d4f;
       margin-top: 0;
-      color: #2e9d60;
     }
 
-    .berita-item small {
+    .tanggal {
+      font-size: 14px;
       color: #777;
+      margin-bottom: 8px;
     }
 
     footer {
+      background-color: #2e7d4f;
+      color: white;
       text-align: center;
-      padding: 20px;
-      color: #777;
-      font-size: 14px;
-    }
-
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 8px 0;
-      }
+      padding: 15px;
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -78,34 +105,54 @@
 <body>
 
 <header>
-  <h1>Berita PERWOSI</h1>
-  <nav>
+  <img src="foto/logo.png" alt="Logo PERWOSI Kabupaten Sumenep">
+  <h1>Berita PERWOSI Kabupaten Sumenep</h1>
+
+  <nav aria-label="Menu Utama">
     <a href="index.html">Beranda</a>
     <a href="profil2.html">Profil</a>
     <a href="program.html">Program</a>
     <a href="galeri.html">Galeri</a>
     <a href="berita.html">Berita</a>
-    <a href="daftar.html">Daftar</a>
     <a href="kontak.html">Kontak</a>
   </nav>
 </header>
 
-<main class="container">
+<main>
 
-  <!-- BERITA 1 -->
-  <div class="berita-item">
-    <img src="foto/berita1.jpg" alt="Line Dance Perwosi2025">
-    <div class="berita">
-  <h2>PERWOSI SUMENEP GELAR LAUNCHING DAN SOSIALISASI SENAM LINE DANCE 2025</h2>
-  <small>2025-12-13</small>
-  <p>Pengurus Cabang Perwosi Kabupaten Sumenep menggelar giat spektakuler bertajuk "Launcing dan Sosialisasi Senam Line Dance 2025". acara ini dilaksanakan di Jl. Dr. Soetomo Sumenep (Area Car Free Day) yang diikuti sebanyak 261 peserta yang terdiri dari seluruh Pengurus Cabang Perwosi Sumenep, Pengurus Ranting Perwosi Kecamatan se Kabupaten Sumenep dan Unsur Pelaksana Dharwa Wanita OPD/bagian se kabupaten Sumenep.<br><br>Dentuman Lagu rancak mengiringi gerakan seluruh peserta, yang secara apik mengikuti ritme gerakan instruktur Senam Line Dance.  yang tak kalah menariknya adalah seluruh peserta mengenakan busana kebaya, seakan menambah kemeriahan acara tersebut.<br><br>Ibu Nyai Jamila Siradj, menyampaikan apresiasi yang tinggi atas terselenggaranya acara ini, utamanya kepada pengurus Cabang Perwosi kabupaten sumenep yang telah berinisiatif sebagai penyelenggara dan kepada seluruh peserta senam yang telah berpartisipasi. selanjutnya beliau berharap agar agenda positif semacam ini dapat terus diselenggarakan untuk memacu semangat dan meningkatkan kebugaran para perempuan di Kabupaten Sumenep.</p>
-  <hr>
-</div>
+  <div class="berita-grid">
+
+    <!-- BERITA 1 -->
+    <article class="berita-card">
+      <img src="foto/berita1.jpg" alt="Kegiatan senam bersama PERWOSI Sumenep">
+      <div class="berita-content">
+        <h2>Launching dan Sosialisasi Senam Line Dance Perwosi 2025</h2>
+        <div class="tanggal">13 Desember 2025</div>
+        <p>
+          PERWOSI Kabupaten Sumenep menggelar kegiatan Launching dan Sosialisasi senam Line Dance bersama sebagai upaya
+          meningkatkan kebugaran dan kebersamaan anggota.
+        </p>
+      </div>
+    </article>
+
+    <!-- BERITA 2 -->
+    <article class="berita-card">
+      <img src="foto/berita2.jpg" alt="Rapat koordinasi pengurus PERWOSI Sumenep">
+      <div class="berita-content">
+        <h2>Membludaknya peserta line dance perwosi 2025</h2>
+        <div class="tanggal">13 Desember 2025</div>
+        <p>
+          Kegiatan Perwosi dihadiri 216 Peserta se kabupaten sumenep.
+        </p>
+      </div>
+    </article>
+
+  </div>
 
 </main>
 
 <footer>
-  © 2025 PERWOSI Kabupaten Sumenep
+  <p>&copy; 2025 PERWOSI Kabupaten Sumenep</p>
 </footer>
 
 </body>
