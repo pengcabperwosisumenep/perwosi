@@ -247,6 +247,49 @@ nav a:hover,
 nav a:focus {
   background-color: rgba(255,255,255,0.2);
 }
+/* ===== HERO ALA WEBSITE PEMERINTAH ===== */
+.hero {
+  background: linear-gradient(
+      rgba(46, 125, 79, 0.85),
+      rgba(46, 125, 79, 0.85)
+    ),
+    url('foto/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 20px;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.hero h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 700px;
+}
+
+.hero a {
+  display: inline-block;
+  margin-top: 20px;
+  background: white;
+  color: #2e7d4f;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero a:hover,
+.hero a:focus {
+  background: #e6f4ec;
+}
 
   </style>
 </head>
@@ -278,7 +321,20 @@ nav a:focus {
 
   </div>
 </header>
+<section class="hero" aria-label="Sambutan PERWOSI Kabupaten Sumenep">
+  <div class="hero-inner">
+    <h2>Selamat Datang di Website Resmi</h2>
+    <p>
+      Pengurus Cabang Persatuan Wanita Olahraga Seluruh Indonesia (PERWOSI)
+      Kabupaten Sumenep berkomitmen mendorong peran aktif perempuan
+      dalam pembangunan olahraga yang sehat, inklusif, dan berkelanjutan.
+    </p>
 
+    <a href="profil.html" aria-label="Baca profil PERWOSI Kabupaten Sumenep">
+      Profil PERWOSI
+    </a>
+  </div>
+</section>
 
 <div class="pengumuman" role="region" aria-label="Pengumuman">
   <marquee>
