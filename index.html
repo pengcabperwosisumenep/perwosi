@@ -2,99 +2,95 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <title>PERWOSI Kabupaten Sumenep</title>
+  <meta name="description" content="Website resmi PERWOSI Kabupaten Sumenep">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PERWOSI KABUPATEN SUMENEP</title>
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f6f8;
-      color: #333;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      line-height: 1.6;
     }
 
-    /* HEADER */
     header {
-      background: #3aa76d;
-      text-align: center;
-      padding: 25px 10px;
+      background-color: #2e9d60;
       color: white;
-    }
-
-    header img {
-      width: 90px;
-      margin-bottom: 10px;
-    }
-
-    header h1 {
-      margin: 10px 0;
-      font-size: 24px;
-      letter-spacing: 1px;
-    }
-
-    /* MENU */
-    nav {
-      margin-top: 10px;
+      padding: 20px;
+      text-align: center;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 12px;
+      margin: 0 10px;
       font-weight: bold;
-      font-size: 14px;
     }
 
     nav a:hover {
       text-decoration: underline;
     }
 
-    /* KONTEN */
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
+    .hero {
+      background: white;
       text-align: center;
+      padding: 40px 20px;
     }
 
     .hero img {
+      max-width: 300px;
       width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
 
-    .box {
-      background: white;
-      margin: 40px auto;
-      padding: 30px;
-      border-radius: 15px;
+    .hero h1 {
+      color: #2e9d60;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
       max-width: 700px;
+      margin: 0 auto 20px;
+      color: #333;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #2e9d60;
+      color: white;
+      padding: 12px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background-color: #257c4c;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      text-align: left;
     }
 
-    .box h2 {
-      color: #3aa76d;
-      margin-top: 0;
-    }
-
-    /* FOOTER */
     footer {
       text-align: center;
-      padding: 30px 10px;
+      padding: 20px;
       color: #777;
       font-size: 14px;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 18px;
-      }
-
       nav a {
-        display: inline-block;
-        margin: 6px;
+        display: block;
+        margin: 8px 0;
       }
     }
   </style>
@@ -102,41 +98,46 @@
 
 <body>
 
-  <header>
-    <img src="foto/logo.png" alt="Logo PERWOSI Kabupaten Sumenep">
-    <h1>PERWOSI KABUPATEN SUMENEP</h1>
-    <nav aria-label="Menu Utama">
+<header>
+  <h1>PERWOSI Kabupaten Sumenep</h1>
+  <nav>
     <a href="index.html">Beranda</a>
     <a href="profil2.html">Profil</a>
     <a href="program.html">Program</a>
     <a href="galeri.html">Galeri</a>
     <a href="berita.html">Berita</a>
     <a href="daftar.html">Daftar</a>
-    <a href="kontak.html" aria-current="page">Kontak</a>
-</nav>
-  </header>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+</header>
 
-  <div class="container">
-    <div class="hero">
-      <img src="foto/beranda.jpg" alt="Kegiatan PERWOSI Kabupaten Sumenep">
-    </div>
+<section class="hero">
+  <!-- GANTI FOTO INI -->
+  <img src="foto/beranda.jpg" alt="Kegiatan olahraga PERWOSI Kabupaten Sumenep">
 
-    <div class="box">
-      <h2>Selamat Datang</h2>
-      <p>
-        Selamat datang di website resmi Pengurus Cabang
-        <strong>PERWOSI Kabupaten Sumenep</strong>.
-      </p>
-      <p>
-        Website ini menjadi media informasi kegiatan, program kerja,
-        serta sarana pendaftaran anggota PERWOSI Kabupaten Sumenep.
-      </p>
-    </div>
-  </div>
+  <h1>Persatuan Wanita Olahraga Seluruh Indonesia</h1>
+  <p>
+    Website resmi PERWOSI Kabupaten Sumenep sebagai wadah informasi,
+    kegiatan, dan pembinaan olahraga perempuan.
+  </p>
 
-  <footer>
-    © 2025 PERWOSI Kabupaten Sumenep
-  </footer>
+  <a href="berita.html" class="button">Lihat Berita</a>
+  <a href="daftar.html" class="button">Daftar Anggota</a>
+  <a href="kontak.html" class="button">Hubungi Kami</a>
+</section>
+
+<section class="container">
+  <h2>Selamat Datang</h2>
+  <p>
+    PERWOSI Kabupaten Sumenep berkomitmen mendorong perempuan untuk
+    hidup sehat, aktif, dan produktif melalui kegiatan olahraga
+    yang inklusif dan berkelanjutan.
+  </p>
+</section>
+
+<footer>
+  © 2025 PERWOSI Kabupaten Sumenep
+</footer>
 
 </body>
 </html>
