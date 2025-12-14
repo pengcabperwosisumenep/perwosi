@@ -278,32 +278,15 @@ footer {
   <p>&copy; 2025 PERWOSI Kabupaten Sumenep</p>
 </footer>
 
-<!-- Chatbase -->
 <script>
-  (function(d, w, c) {
-    w.Chatbase = w.Chatbase || {};
-    w.Chatbase.c = c;
-    var s = d.createElement("script");
-    s.src = "https://www.chatbase.co/embed.min.js";
-    s.defer = true;
-    d.body.appendChild(s);
-  })(document, window, "mRk8gVj87HGzEb5Yicnw");
+  window.chatbaseConfig = {
+    chatbotId: "mRk8gVj87HGzEb5Yicnw"
+  };
 </script>
-
-<style>
-  #chatbase-bubble,
-  iframe[src*="chatbase"] {
-    z-index: 99999 !important;
-  }
-</style>
-
-<style>
-  #chatbase-message-bubbles {
-    display: flex !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-</style>
+<script
+  src="https://www.chatbase.co/embed.min.js"
+  defer>
+</script>
 
 </body>
 </html>
