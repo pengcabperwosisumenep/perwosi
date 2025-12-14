@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Admin | PERWOSI Sumenep</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+    }
+
+    header {
+      background: #2e9d60;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .menu a {
+      display: block;
+      padding: 20px;
+      background: #e8f5ee;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #2e9d60;
+      font-weight: bold;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .menu a:hover {
+      background: #ccead9;
+    }
+
+    .logout {
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    .logout a {
+      color: white;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Dashboard Admin</h1>
+  <p>PERWOSI Kabupaten Sumenep</p>
+  <div class="logout">
+    <a href="login.html">Logout</a>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>Selamat Datang, Admin 👋</h2>
+    <p>
+      Gunakan menu di bawah untuk mengelola konten website PERWOSI
+      Kabupaten Sumenep.
+    </p>
+  </div>
+
+  <div class="menu">
+    <a href="#">Kelola Berita</a>
+    <a href="#">Kelola Galeri</a>
+    <a href="#">Kelola Program</a>
+    <a href="#">Pengaturan</a>
+  </div>
+
+</div>
+
+</body>
+</html>
